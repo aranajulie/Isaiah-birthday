@@ -1,0 +1,153 @@
+< !DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level 25 — For Isaiah ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#542071,#100b25 65%,#050713);color:#ffe6f4;font-family:Georgia,serif;text-align:center;min-height:100vh}
+section{display:none;min-height:100vh;padding:45px 20px 70px;align-items:center;justify-content:center;flex-direction:column}
+section.active{display:flex}
+h1{font-size:clamp(2.6rem,10vw,5rem);letter-spacing:5px;margin:12px;color:#ffd5e8;text-shadow:0 0 22px #ff5fb8}
+h2{font-size:2rem;color:#ffb8da}
+p{line-height:1.8;max-width:650px}
+button{background:#300f38;color:#ffe6f4;border:1px solid #ff91ce;border-radius:30px;padding:14px 24px;margin:10px;font-size:1rem;box-shadow:0 0 15px #ed55ad;cursor:pointer}
+button:hover{background:#70205e}
+.small{color:#f7b7e3;font-style:italic}
+.heart{font-size:2rem;cursor:pointer;background:none;border:0;box-shadow:none;padding:8px;margin:3px}
+#reason{min-height:90px;border:1px solid #ff91ce;padding:18px;border-radius:15px;max-width:500px}
+.card{max-width:650px;background:#170e2be8;border:1px solid #d56bad;border-radius:20px;padding:25px;box-shadow:0 0 30px #7d2d85}
+</style>
+</head>
+<body>
+<section id="home" class="active">
+<p class="small">✦ OUR STORY, WRITTEN IN THE STARS ✦</p>
+<h1>LEVEL 25</h1>
+<h2>For Isaiah ♡</h2>
+<p>My honey love ♡</p>
+<p>SAME PLAYER<br>DIFFERENT LEVELS<br>FIVE YEARS<br>AND STILL MY FAVORITE PERSON</p>
+<p>Somewhere beneath the stars, our story began.</p>
+<button onclick="show('letter')">START OUR STORY ♡</button>
+</section>
+<section id="letter">
+<h2>A Message for You 💌</h2>
+<div class="card">
+<p>Happy 25th Birthday, my Isaiah ♡</p>
+<p>My love, today is a celebration of you — the amazing, kind, funny, and incredible person I get to do life with. You make everything brighter just by being you, and I’m so grateful I get to call you mine.</p>
+<p>Five years ago, we sat together on that cliff at night, and it felt magical. I remember looking at the sky with you and thinking how special that moment was. I had no idea how many beautiful memories we would create together.</p>
+<p>You once told me the first time you knew you loved me was when I tickled you. I still smile thinking about it. Thank you for the laughs, the cuddles, the movie nights, and all the little moments that mean everything to me.</p>
+<p>I’m so grateful for everything you do for me. You’re always there for me, you support me, you take care of me, and you love me in a way that feels safe and real. You’re my best friend, my home, and my favorite person.</p>
+<p>You deserve to feel loved and celebrated today. If I could choose again, I’d still choose you.</p>
+<p class="small">I love you, always. ♡</p>
+</div>
+<button onclick="show('reasons')">25 REASONS I LOVE YOU →</button>
+</section>
+<section id="reasons">
+<h2>25 Reasons I Love You ♡</h2>
+<p>Tap each heart to reveal a reason.</p>
+<div id="hearts"></div>
+<div id="reason">Tap a heart, my love. ❤️</div>
+<button onclick="show('memories')">OUR MEMORIES →</button>
+</section>
+<section id="memories">
+<h2>Our Favorite Memories ✨</h2>
+<div class="card">
+<p>🌌 <b>Our first date — the cliff</b><br>That magical night under the stars when our story began.</p>
+<p>😂 <b>Tickle attacks</b><br>The moment you told me you knew you loved me.</p>
+<p>🎬 <b>Movie nights</b><br>Snuggling up for sci-fi, horror, and psychological movies.</p>
+<p>🤍 <b>Five years and counting</b><br>Every little moment with you is one I treasure.</p>
+<p>💫 <b>My favorite person</b><br>The memories we’ve made — and all the ones still waiting for us.</p>
+</div>
+<button onclick="show('game')">CATCH MY HEARTS →</button>
+</section>
+<section id="game">
+<h2>A Little Game for You 🎮</h2>
+<p>Birthday challenge: tap the hearts as fast as you can!</p>
+<div class="card">
+<p>Hearts caught: <b id="score">0</b> / 5</p>
+<button class="heart" onclick="catchHeart()">💖</button>
+<button class="heart" onclick="catchHeart()">💗</button>
+<button class="heart" onclick="catchHeart()">💘</button>
+<button class="heart" onclick="catchHeart()">💕</button>
+<button class="heart" onclick="catchHeart()">💝</button>
+<p id="gameMessage">Catch all five to unlock your surprise!</p>
+</div>
+<button id="finish" style="display:none" onclick="show('cliff')">UNLOCK YOUR SURPRISE →</button>
+</section>
+<section id="cliff">
+<p class="small">✦ SAME SKY… STILL MY FAVORITE VIEW ✦</p>
+<h1>US ♡</h1>
+<div class="card">
+<p>Five years ago, we sat on a cliff beneath the night sky, and it felt like the start of something magical.</p>
+<p>Today, I get to celebrate you — my love, my best friend, my adventure, and my forever.</p>
+<p>Thank you for being you. Here’s to every level, every memory, and every future we’ll create together.</p>
+</div>
+<button onclick="show('final')">ONE LAST THING, HONEY LOVE ♡</button>
+</section>
+<section id="final">
+<p class="small">THE BEST PART OF MY STORY IS YOU</p>
+<h2>Happy 25th Birthday</h2>
+<h1>ISAIAH ♡</h1>
+<p>My honey love, my boob, my best friend, my favorite person.</p>
+<p>Here’s to level 25 — and all the adventures still waiting for us.</p>
+<h2>I LOVE YOU, ALWAYS. 💖</h2>
+<button onclick="show('home')">READ OUR STORY AGAIN ↺</button>
+</section>
+<script>
+function show(id){
+document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+const reasons=[
+"You make me feel safe, loved, and cared for.",
+"You make ordinary days feel special.",
+"You always find ways to make me smile.",
+"You are my best friend.",
+"I love your hugs and cuddles.",
+"I love laughing with you.",
+"You support me when I need it.",
+"You make me feel at home.",
+"I love our movie nights.",
+"You make me feel loved just by being near me.",
+"I love your sense of humor.",
+"I love the memories we share.",
+"You listen to me.",
+"You are someone I can count on.",
+"I love our little inside jokes.",
+"You make even quiet moments special.",
+"I love the way we can be ourselves together.",
+"You make me excited for our future.",
+"I love how close we have become.",
+"You bring comfort to my life.",
+"I love remembering our first date.",
+"I love that you still make me smile.",
+"I love how much we have grown together.",
+"I am grateful for everything you do for me.",
+"If I could choose again, I would still choose you."
+];
+const grid=document.getElementById('hearts');
+reasons.forEach((r,i)=>{
+const b=document.createElement('button');
+b.className='heart';b.textContent='♡';
+b.setAttribute('aria-label','Reason '+(i+1));
+b.onclick=()=>{
+document.getElementById('reason').textContent=(i+1)+'. '+r;
+b.textContent='♥';
+};
+grid.appendChild(b);
+});
+let score=0;
+function catchHeart(){
+if(score>=5)return;
+score++;
+document.getElementById('score').textContent=score;
+if(score===5){
+document.getElementById('gameMessage').textContent='You caught all my hearts! Your surprise is ready, birthday boy! 💖';
+document.getElementById('finish').style.display='inline-block';
+}
+}
+</script>
+</body>
+</html>
